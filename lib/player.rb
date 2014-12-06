@@ -1,14 +1,14 @@
 class Player
 
-  attr_accessor :id, :my_squares
+  attr_accessor :id, :my_moves
 
   def initialize(id)
     @id = id
-    @my_squares = []
+    @my_moves = []
   end
 
   def place(position)
-    @my_squares << position
+    @my_moves << position
   end
 
 end

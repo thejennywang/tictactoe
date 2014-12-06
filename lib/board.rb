@@ -1,8 +1,6 @@
-require './lib/square'
-
 class Board
 
-  attr_accessor :contents
+  attr_accessor :contents, :grid_hash
 
   def initialize
     @contents = [create_grid]
