@@ -1,16 +1,23 @@
 class Board
 
-  attr_accessor :contents, :grid_hash
+  attr_accessor :contents
 
   def initialize
-    @contents = [create_grid]
+    @contents = {}
+    (1..9).each do |number|
+      @contents["#{number}"] = ""
+    end
+    @contents
   end
 
-  def create_grid 
-    @grid_hash = {}
-    (1..9).each do |number|
-      @grid_hash["#{number}"] = ""
+  def full?
+    @contents.each do | square_number, content|
+      if content.empty?
+        false
+      else
+        true
+      end
     end
-    @grid_hash
+
   end
 end
