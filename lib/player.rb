@@ -7,7 +7,7 @@ class Player
     @my_moves = []
   end
 
-  def place(position)
+  def choose(position)
     @my_moves << position
   end
 
