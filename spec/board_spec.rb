@@ -11,7 +11,13 @@ describe 'Board' do
   it 'knows when it is full' do
     board = Board.new
 
-    board.contents.each_value { |value| 'x' }
+    expect(board.full?).to be false
+
+    board.contents.each_value do |value|
+      value.replace "x"
+    end
+
+    expect(board.full?).to be true
   end
 
 end

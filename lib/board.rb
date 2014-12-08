@@ -11,13 +11,7 @@ class Board
   end
 
   def full?
-    @contents.each do | square_number, content|
-      if content.empty?
-        false
-      else
-        true
-      end
-    end
-    
+    @contents.has_value?("") == false
   end
+
 end
